@@ -26,7 +26,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--input-size', type=int, default=224)
     parser.add_argument('--batch-size', type=int, default=64)
-    parser.add_argument('--num-epochs', type=int, default=25)
+    parser.add_argument('--num-epochs', type=int, default=100)
     parser.add_argument('--num-workers', type=int, default=8)
     parser.add_argument('--lmdb-file', type=str, default='lmdb_train')
     parser.add_argument('--log-dir', type=str, default='logs')
@@ -69,7 +69,7 @@ def get_data_loaders(root, input_size, batch_size, num_workers, device):
 
 
 def build_model(num_classes):
-    model = models.resnet101(pretrained=True)
+    model = models.resnet50(pretrained=True)
 
     # for param in model.parameters():
     #     param.requires_grad = False
