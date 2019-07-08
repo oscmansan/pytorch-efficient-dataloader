@@ -1,0 +1,6 @@
+torch
+torchvision
+pytorch-ignite
+tqdm
+lmdb
+tensorboard
